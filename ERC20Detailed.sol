@@ -24,7 +24,7 @@ contract ERC20Detailed is IERC20 {
     }
     
     function setInfor (string memory name, string memory symbol) public returns (bool) {
-        require(msg.sender == dev);
+        require(msg.sender == _dev);
         _name = name;
         _symbol = symbol;
         
