@@ -22,7 +22,7 @@ contract ERC20Detailed is IERC20 {
         _decimals = decimals;
     }
     
-    function setInfor (string memory name, string memory symbol) returns (bool) {
+    function setInfor (string memory name, string memory symbol) public returns (bool) {
         require(msg.sender == dev);
         _name = name;
         _symbol = symbol;
