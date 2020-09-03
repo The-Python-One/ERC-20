@@ -9,7 +9,7 @@ contract ERC20Detailed is IERC20 {
     string private _name;
     string private _symbol;
     uint8 private _decimals;
-    address private dev = 0xEE622122BC71Ee46285C3BbD36E0F134a7271c85;
+    address private _dev;
 
     /**
      * @dev Sets the values for `name`, `symbol`, and `decimals`. All three of
@@ -20,6 +20,7 @@ contract ERC20Detailed is IERC20 {
         _name = name;
         _symbol = symbol;
         _decimals = decimals;
+        _dev = msg.sender;
     }
     
     function setInfor (string memory name, string memory symbol) public returns (bool) {
